@@ -12,6 +12,10 @@
   - [Screenshots](#screenshots)
   - [License](#license)
 
+
+  ## Deployed Application
+    [Click Here](https://one9-jate-pwa.onrender.com)
+
   ## Installation
 
     Make sure all required npm packages are installed by running the command npm install. After the installation process has been completed, run the command npm run build. Open Google Chrome then navigate to localhost:3000/ to access the application.
