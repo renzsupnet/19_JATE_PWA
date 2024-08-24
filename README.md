@@ -27,6 +27,16 @@
     This is the text editor
   ![A Screenshot of the text editor](./assets/screenshots/sample.png)
 
+    This is the manifest.json.
+  ![A Screenshot of the manifest.json](./assets/screenshots/manifest.png)
+
+    This is the asset cache.
+  ![A Screenshot of the asset cache](./assets//screenshots/asset_cache.png)
+
+    This is the service worker in action.
+  ![A Screenshot of the service worker](./assets/screenshots/service_worker.png)
+
+
   ## License 
   ### Badge 
   ![Static Badge](https://img.shields.io/badge/MIT-license-blue)
