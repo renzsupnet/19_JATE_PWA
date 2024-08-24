@@ -28,8 +28,10 @@ export default class {
       console.info('Loaded data from IndexedDB, injecting into editor');
       try {
         if (data.length) {
+          // Stringify data to not return [Object object]
           this.editor.setValue(JSON.stringify(data, null, 2));
         } else if (localData) {
+          // Stringify localData to not return [Object object]
           this.editor.setValue(JSON.stringify(localData, null, 2));
         } else {
           this.editor.setValue(header);
