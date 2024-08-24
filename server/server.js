@@ -8,5 +8,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 require('./routes/htmlRoutes')(app);
-
+app.use((req, res, next) => {
+    console.log(`Request URL: ${req.url}`);
+    next();
+  });
 app.listen(PORT, () => console.log(`Now listening on port: ${PORT}`));

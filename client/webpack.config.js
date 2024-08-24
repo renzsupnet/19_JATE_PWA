@@ -16,6 +16,7 @@ module.exports = () => {
     output: {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
+      publicPath: '/', // Set the publicPath explicitly
     },
     plugins: [
       new HtmlWebpackPlugin({
@@ -23,8 +24,8 @@ module.exports = () => {
         title: 'Webpack Plugin',
       }),
       new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'service-worker.js',
+        swSrc: './src/src-sw.js', // Source service worker file
+        swDest: 'service-worker.js', // Destination service worker file in the output directory
       }),
       new WebpackPwaManifest({
         id: 'J.A.T.E',
@@ -37,7 +38,8 @@ module.exports = () => {
         icons: [
           {
             src: path.resolve('src/images/logo.png'),
-            sizes: [96, 128, 192, 256, 384, 512]
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets')
           }
         ]
       })
