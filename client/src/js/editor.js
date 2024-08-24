@@ -28,9 +28,9 @@ export default class {
       console.info('Loaded data from IndexedDB, injecting into editor');
       try {
         if (data.length) {
-          this.editor.setValue(String(data));
+          this.editor.setValue(JSON.stringify(data, null, 2));
         } else if (localData) {
-          this.editor.setValue(String(localData));
+          this.editor.setValue(JSON.stringify(localData, null, 2));
         } else {
           this.editor.setValue(header);
         }
